@@ -22,11 +22,11 @@ client = OpenAI(api_key=OPENAI_API_KEY)
 
 # Google Calendar setup
 SCOPES = ['https://www.googleapis.com/auth/calendar']
-CREDENTIALS_FILE = '/Users/bavalpreetsingh/Documents/Talks/credentials.json'  # Must be for a Desktop app OAuth client
+CREDENTIALS_FILE = '/Users/../credentials.json'  # Must be for a Desktop app OAuth client
 
 def get_calendar_service():
     creds = None
-    token_path = '/Users/bavalpreetsingh/Documents/Talks/token.json'
+    token_path = '/Users/../token.json'
     if os.path.exists(token_path):
         creds = Credentials.from_authorized_user_file(token_path, SCOPES)
     if not creds or not creds.valid:
